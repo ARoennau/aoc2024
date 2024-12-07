@@ -7,6 +7,14 @@ import (
 	"log"
 	"os"
 	"strconv"
+
+	"github.com/ARoennau/aoc2024/day1"
+	"github.com/ARoennau/aoc2024/day2"
+	"github.com/ARoennau/aoc2024/day3"
+	"github.com/ARoennau/aoc2024/day4"
+	"github.com/ARoennau/aoc2024/day5"
+	"github.com/ARoennau/aoc2024/day6"
+	"github.com/ARoennau/aoc2024/day7"
 )
 
 func main() {
@@ -37,8 +45,32 @@ func main() {
 
 	switch *number {
 	case 1:
-		Part1(scanner)
+		day1.Part1(scanner)
 	case 2:
-		Part2(scanner)
+		day1.Part2(scanner)
+	case 3:
+		day2.Part1(scanner)
+	case 4:
+		day2.Part2(scanner)
+	case 5:
+		day3.Part1(scanner)
+	case 6:
+		day3.Part2(scanner)
+	case 7:
+		day4.Part1(scanner)
+	case 8:
+		day4.Part2(scanner)
+	case 9:
+		day5.Part1(scanner)
+	case 10:
+		day5.Part2(scanner)
+	case 11:
+		day6.Part1(scanner)
+	case 12:
+		day6.Part2(scanner)
+	case 13:
+		day7.Part1(scanner)
+	case 14:
+		day7.Part2(scanner)
 	}
 }

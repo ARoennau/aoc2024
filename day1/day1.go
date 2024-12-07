@@ -1,4 +1,4 @@
-package main
+package day1
 
 import (
 	"bufio"
@@ -9,12 +9,12 @@ import (
 	"strings"
 )
 
-type Day1Arrays struct {
+type Day1Slices struct {
 	left  []int64
 	right []int64
 }
 
-func readArrays(scanner *bufio.Scanner) Day1Arrays {
+func read(scanner *bufio.Scanner) Day1Slices {
 	left := make([]int64, 0)
 	right := make([]int64, 0)
 	for scanner.Scan() {
@@ -26,13 +26,13 @@ func readArrays(scanner *bufio.Scanner) Day1Arrays {
 		right = append(right, int64(rightValue))
 	}
 
-	return Day1Arrays{left, right}
+	return Day1Slices{left, right}
 }
 
 func Part1(scanner *bufio.Scanner) {
-	arrays := readArrays(scanner)
-	left := arrays.left
-	right := arrays.right
+	slices := read(scanner)
+	left := slices.left
+	right := slices.right
 
 	sort.Slice(left, func(i, j int) bool {
 		return left[i] < left[j]
@@ -51,9 +51,9 @@ func Part1(scanner *bufio.Scanner) {
 }
 
 func Part2(scanner *bufio.Scanner) {
-	arrays := readArrays(scanner)
-	left := arrays.left
-	right := arrays.right
+	slices := read(scanner)
+	left := slices.left
+	right := slices.right
 
 	counts := make(map[int64]int64)
 
