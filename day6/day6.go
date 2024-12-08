@@ -19,7 +19,7 @@ var directions = map[string][]int{
 	"down":  {1, 0},
 }
 
-func day6read(scanner *bufio.Scanner) [][]string {
+func read(scanner *bufio.Scanner) [][]string {
 	lines := make([][]string, 0)
 	for scanner.Scan() {
 		current := scanner.Text()
@@ -79,7 +79,7 @@ func findStart(input [][]string) []int {
 }
 
 func Part1(scanner *bufio.Scanner) {
-	input := day6read(scanner)
+	input := read(scanner)
 	grid := Day6Grid{grid: input, currentLocation: findStart(input), direction: "up"}
 	for grid.currentLocation[0] >= 0 && grid.currentLocation[0] < len(input) && grid.currentLocation[1] >= 0 && grid.currentLocation[1] < len(input[0]) {
 		grid.move()
@@ -119,7 +119,7 @@ func (grid *Day6Grid) move2(seen map[string]bool) bool {
 }
 
 func Part2(scanner *bufio.Scanner) {
-	input := day6read(scanner)
+	input := read(scanner)
 	total := 0
 	start := findStart(input)
 	grid := Day6Grid{grid: input, currentLocation: start, direction: "up"}

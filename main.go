@@ -15,6 +15,7 @@ import (
 	"github.com/ARoennau/aoc2024/day5"
 	"github.com/ARoennau/aoc2024/day6"
 	"github.com/ARoennau/aoc2024/day7"
+	"github.com/ARoennau/aoc2024/day8"
 )
 
 func main() {
@@ -72,5 +73,9 @@ func main() {
 		day7.Part1(scanner)
 	case 14:
 		day7.Part2(scanner)
+	case 15:
+		day8.Part1(scanner)
+	case 16:
+		day8.Part2(scanner)
 	}
 }
