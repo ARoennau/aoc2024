@@ -9,6 +9,8 @@ import (
 	"strconv"
 
 	"github.com/ARoennau/aoc2024/day1"
+	"github.com/ARoennau/aoc2024/day10"
+	"github.com/ARoennau/aoc2024/day11"
 	"github.com/ARoennau/aoc2024/day2"
 	"github.com/ARoennau/aoc2024/day3"
 	"github.com/ARoennau/aoc2024/day4"
@@ -77,5 +79,14 @@ func main() {
 		day8.Part1(scanner)
 	case 16:
 		day8.Part2(scanner)
+		// Accidentally deleted day 9 and I'm not going to redo it
+	case 19:
+		day10.Part1(scanner)
+	case 20:
+		day10.Part2(scanner)
+	case 21:
+		day11.Part1(scanner)
+	case 22:
+		day11.Part2(scanner)
 	}
 }
